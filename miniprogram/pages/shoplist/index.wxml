@@ -1,0 +1,36 @@
+<view class="shoplist-container">
+  <!-- 顶部标题和添加按钮 -->
+  <view class="shoplist-title-row">
+    <view class="shoplist-title">店铺选择</view>
+    <button class="add-shop-btn" bindtap="onAddTestShop">添加测试店铺</button>
+  </view>
+
+  <!-- 空状态提示 -->
+  <view wx:if="{{shopList.length === 0}}" class="shoplist-empty">
+    暂无可选店铺
+  </view>
+
+  <!-- 店铺列表 -->
+  <view class="shop-list">
+    <block wx:for="{{shopList}}" wx:key="id">
+      <view class="shop-card">
+        <view class="shop-item-bar" style="background: {{item._color}};"></view>
+        <image class="shop-item-img" src="{{item.img}}" mode="aspectFill"/>
+        <view class="shop-item-content">
+          <view class="shop-name">{{item.name}}</view>
+          <view class="shop-desc">{{item.desc}}</view>
+          <view class="shop-tags">
+            <text wx:for="{{item.tags}}" wx:key="*this" class="shop-tag">{{item}}</text>
+          </view>
+          <view class="shop-info-row">
+            <text class="shop-info-label">地址：</text><text class="shop-info-value">{{item.address}}</text>
+          </view>
+          <view class="shop-info-row">
+            <text class="shop-info-label">营业时间：</text><text class="shop-info-value">{{item.time}}</text>
+          </view>
+        </view>
+        <button class="edit-btn" data-id="{{item.id}}" bindtap="onEditShop">编辑</button>
+      </view>
+    </block>
+  </view>
+</view>

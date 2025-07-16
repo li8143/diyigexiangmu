@@ -1,0 +1,30 @@
+<view class="shopadmin-container">
+  <!-- 店铺信息编辑区 -->
+  <view class="shopadmin-section">
+    <view class="shopadmin-title">店铺信息</view>
+    <view class="shopadmin-form">
+      <view class="form-row">
+        <view class="form-label">店铺封面</view>
+        <image class="shop-img" src="{{shop.img}}" mode="aspectFill" wx:if="{{shop.img}}"/>
+        <button class="img-btn" bindtap="onChooseImage">上传/更换图片</button>
+      </view>
+      <view class="form-row">
+        <view class="form-label">店铺名称</view>
+        <input class="form-input" value="{{shop.name}}" bindinput="onInputName" placeholder="请输入店铺名称"/>
+      </view>
+      <view class="form-row">
+        <view class="form-label">简介</view>
+        <textarea class="form-textarea" value="{{shop.desc}}" bindinput="onInputDesc" placeholder="请输入店铺简介"/>
+      </view>
+      <view class="form-row">
+        <view class="form-label">地址</view>
+        <input class="form-input" value="{{shop.address}}" bindinput="onInputAddress" placeholder="请输入店铺地址"/>
+      </view>
+      <view class="form-row">
+        <view class="form-label">营业时间</view>
+        <input class="form-input" value="{{shop.time}}" bindinput="onInputTime" placeholder="如 08:00-20:00"/>
+      </view>
+    </view>
+    <button class="save-btn" bindtap="onSaveShop">保存</button>
+  </view>
+</view>

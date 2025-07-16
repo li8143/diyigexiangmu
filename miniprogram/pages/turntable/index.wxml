@@ -1,0 +1,45 @@
+<view class="turntable-container">
+  <!-- 顶部：店铺名称和简介 -->
+  <view class="shop-info" wx:if="{{shopInfo}}">
+    <view class="shop-name">{{shopInfo.name}}</view>
+    <view class="shop-desc">{{shopInfo.desc}}</view>
+  </view>
+
+  <!-- 加载中 -->
+  <view wx:if="{{loading}}" style="margin: 40px 0; text-align: center; color: #888;">加载中...</view>
+
+  <!-- 错误或无美食提示 -->
+  <view wx:if="{{!loading && errorMsg}}" style="margin: 40px 0; text-align: center; color: #e55;">{{errorMsg}}</view>
+
+  <!-- 转盘区域（仅有美食时显示） -->
+  <view class="turntable-area" wx:if="{{!loading && !errorMsg}}">
+    <canvas
+      class="turntable-canvas"
+      canvas-id="turntable"
+      id="turntable"
+      width="{{canvasSize}}"
+      height="{{canvasSize}}"
+      style="width: {{canvasSize}}px; height: {{canvasSize}}px; display: block; margin: 0 auto;"
+    ></canvas>
+  </view>
+
+  <!-- 开始抽奖按钮悬浮在屏幕靠下位置 -->
+  <button class="draw-btn-fixed" bindtap="onDrawTap" wx:if="{{!showResult && !loading && !errorMsg}}">开始抽奖</button>
+
+  <!-- 抽奖结果弹窗 -->
+  <view wx:if="{{showResult}}" class="result-modal">
+    <view class="result-content">
+      <image class="result-img" src="{{resultImg}}" mode="aspectFit"/>
+      <text class="result-name">{{resultName}}</text>
+      <text class="result-desc">{{resultDesc}}</text>
+      <button class="close-btn" bindtap="onCloseResult">关闭</button>
+    </view>
+  </view>
+
+  <!-- 底部导航 -->
+  <view class="bottom-bar">
+    <button class="nav-btn">抽奖历史</button>
+    <button class="nav-btn">我的收藏</button>
+    <button class="nav-btn">个人中心</button>
+  </view>
+</view>

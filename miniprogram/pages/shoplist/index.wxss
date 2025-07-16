@@ -1,0 +1,130 @@
+/* pages/shoplist/index.wxss */
+.shoplist-container {
+  min-height: 100vh;
+  background: #F5ECE6; /* 主题背景色 */
+  padding: 0 24rpx 40rpx 24rpx;
+}
+.shoplist-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #8D6E63;
+  text-align: center;
+  margin: 48rpx 0 32rpx 0;
+  letter-spacing: 2rpx;
+}
+.shoplist-empty {
+  margin: 80rpx 0 40rpx 0;
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 30rpx;
+}
+.shop-item {
+  background: #fff;
+  border-radius: 32rpx;
+  box-shadow: 0 4rpx 24rpx #e0d7ce;
+  margin-bottom: 40rpx;
+  padding: 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.shop-item-bar {
+  width: 12rpx;
+  background: #8D6E63;
+  border-radius: 32rpx 0 0 32rpx;
+  margin-right: 0;
+}
+.shop-item-logo {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 24rpx 0 16rpx;
+  box-shadow: 0 2rpx 8rpx #eee;
+  flex-shrink: 0;
+}
+.shop-item-content {
+  flex: 1;
+  padding: 36rpx 32rpx 28rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shop-item:active {
+  box-shadow: 0 8rpx 32rpx #bca;
+  background: #F3E9E2;
+}
+.shop-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #4E342E;
+  margin-bottom: 10rpx;
+}
+.shop-desc {
+  font-size: 26rpx;
+  color: #8D6E63;
+  word-break: break-all;
+  line-height: 1.6;
+}
+.shoplist-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 48rpx 0 32rpx 0;
+}
+.add-shop-btn {
+  font-size: 24rpx;
+  padding: 8rpx 24rpx;
+  background: #BCAAA4;
+  color: #4E342E;
+  border-radius: 20rpx;
+  border: none;
+  box-shadow: 0 2rpx 8rpx #eee;
+  margin-left: 20rpx;
+}
+.shop-tags {
+  margin-top: 16rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+.shop-tag {
+  background: #F5ECE6;
+  color: #8D6E63;
+  font-size: 22rpx;
+  border-radius: 16rpx;
+  padding: 4rpx 18rpx;
+  margin-right: 0;
+}
+.shop-item-img {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 16rpx;
+  object-fit: cover;
+  margin: 0 24rpx 0 16rpx;
+  box-shadow: 0 2rpx 8rpx #eee;
+  flex-shrink: 0;
+}
+.shop-info-row {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #8D6E63;
+  display: flex;
+  align-items: center;
+}
+.shop-info-label {
+  color: #BCAAA4;
+  margin-right: 6rpx;
+}
+.shop-info-value {
+  color: #8D6E63;
+}

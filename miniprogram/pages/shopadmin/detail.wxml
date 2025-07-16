@@ -1,0 +1,18 @@
+<view class="shopadmin-container">
+  <view class="shop-card">
+    <image class="shop-logo" src="{{shopInfo.logo || '/images/default-goods-image.png'}}" mode="aspectFill"/>
+    <view class="shop-name">{{shopInfo.name}}</view>
+    <view class="shop-desc">{{shopInfo.desc}}</view>
+  </view>
+  <view class="info-card">
+    <view class="info-row">
+      <text class="iconfont icon-location"></text>
+      <text>{{shopInfo.address || '暂无地址'}}</text>
+    </view>
+    <view class="info-row">
+      <text class="iconfont icon-time"></text>
+      <text>{{shopInfo.openTime || '暂无营业时间'}}</text>
+    </view>
+  </view>
+  <button class="edit-btn" bindtap="onEditShop">编辑商家信息</button>
+</view> 

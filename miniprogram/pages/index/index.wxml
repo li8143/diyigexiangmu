@@ -1,0 +1,21 @@
+<view class="role-choose-container">
+  <view class="role-logo">COFFEE TIME</view>
+  <view class="role-btn-group">
+    <button class="role-btn user-btn" bindtap="onUserEnter">我是顾客/用户</button>
+    <button class="role-btn merchant-btn" bindtap="onMerchantEnter">我是商家</button>
+  </view>
+  <view class="role-footer">欢迎体验咖啡店下午茶抽奖与商家管理系统</view>
+
+  <!-- 商家邀请码弹窗 -->
+  <view wx:if="{{showInviteModal}}" class="invite-modal-mask">
+    <view class="invite-modal">
+      <view class="invite-title">请输入商家邀请码</view>
+      <input class="invite-input" value="{{inviteCodeInput}}" bindinput="onInviteInput" placeholder="请输入邀请码"/>
+      <view class="invite-error" wx:if="{{inviteError}}">{{inviteError}}</view>
+      <view class="invite-btn-row">
+        <button class="invite-cancel" bindtap="onInviteCancel">取消</button>
+        <button class="invite-ok" bindtap="onInviteOk">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

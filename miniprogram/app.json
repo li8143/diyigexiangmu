@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shoplist/index",
+    "pages/turntable/index",
+    "pages/history/index",
+    "pages/favorite/index",
+    "pages/user/index",
+    "pages/shopadmin/detail",
+    "pages/shopadmin/index",
+    "pages/foodedit/index"
+  ]
+}
