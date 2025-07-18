@@ -32,11 +32,38 @@
   overflow: hidden;
   position: relative;
 }
+.shop-card {
+  position: relative;
+  min-height: 160rpx;
+  margin-bottom: 32rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 12rpx #e0d7ce;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 24rpx;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 18rpx;
+  right: 18rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 1024 1024" fill="%238D6E63" xmlns="http://www.w3.org/2000/svg"><path d="M880.64 320.64l-177.28-177.28c-25.6-25.6-67.2-25.6-92.8 0l-448 448c-6.4 6.4-12.8 19.2-12.8 32v192c0 38.4 25.6 64 64 64h192c12.8 0 25.6-6.4 32-12.8l448-448c25.6-25.6 25.6-67.2 0-92.8zM352 832H160v-192l384-384 192 192-384 384zm480-480l-64 64-192-192 64-64c12.8-12.8 32-12.8 44.8 0l177.28 177.28c12.8 12.8 12.8 32 0 44.8z"/></svg>') no-repeat center center;
+  background-size: 60% 60%;
+  cursor: pointer;
+  z-index: 2;
+}
 .shop-item-bar {
+  position: absolute;
+  left: 0;
+  top: 16rpx;
+  bottom: 16rpx;
   width: 12rpx;
-  background: #8D6E63;
-  border-radius: 32rpx 0 0 32rpx;
-  margin-right: 0;
+  border-radius: 8rpx;
+  background: #8D6E63; /* 会被 item._color 覆盖 */
 }
 .shop-item-logo {
   width: 64rpx;

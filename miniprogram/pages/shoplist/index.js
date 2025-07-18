@@ -6,8 +6,7 @@ Page({
     this.loadShops();
   },
   onShow() {
-    const shopList = wx.getStorageSync('shopList') || [];
-    this.setData({ shopList });
+    this.loadShops();
   },
   loadShops() {
     const shops = wx.getStorageSync('shopList') || [];

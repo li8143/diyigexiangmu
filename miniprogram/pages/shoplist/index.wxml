@@ -16,6 +16,7 @@
       <view class="shop-card">
         <view class="shop-item-bar" style="background: {{item._color}};"></view>
         <image class="shop-item-img" src="{{item.img}}" mode="aspectFill"/>
+        <view class="edit-icon" data-id="{{item.id}}" bindtap="onEditShop"></view>
         <view class="shop-item-content">
           <view class="shop-name">{{item.name}}</view>
           <view class="shop-desc">{{item.desc}}</view>
@@ -29,7 +30,6 @@
             <text class="shop-info-label">营业时间：</text><text class="shop-info-value">{{item.time}}</text>
           </view>
         </view>
-        <button class="edit-btn" data-id="{{item.id}}" bindtap="onEditShop">编辑</button>
       </view>
     </block>
   </view>
